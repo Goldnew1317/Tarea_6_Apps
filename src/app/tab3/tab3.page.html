@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Prediccion de Edad
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 align="center">
+    <ion-input [(ngModel)]="nombre" placeholder="Ingrese aqui el nombre:"></ion-input>
+    <ion-button (click)="Predecir()"> Predecir Edad </ion-button>
+    <p>{{preds}}</p>
+    <p>{{msg}}</p>
+    <ion-avatar style="margin: 0 auto;"><ion-img [src]="img" ></ion-img></ion-avatar>
+    </h3>
+</ion-content>

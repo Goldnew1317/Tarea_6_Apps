@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Universidades a traves del mundo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 align="center">
+    <ion-input [(ngModel)]="pais" placeholder="Ingrese aqui el pais(en ingles):"></ion-input>
+    <ion-button (click)="Mostrar()"> Mostrar Universidades </ion-button>
+    <br>
+    <br>
+    <ion-list>
+      <ion-item>
+        <ion-label color="secondary">Nombre</ion-label>
+        <ion-label color="secondary">Dominio</ion-label>
+        <ion-label color="secondary">Pagina Web</ion-label>
+      </ion-item>
+      <ion-item *ngFor="let uni of unis">
+        <ion-label>{{[uni.name]}}</ion-label>
+        <ion-label>{{[uni.domains]}}</ion-label>
+        <ion-label><a href="{{uni.web_pages}}">{{[uni.web_pages]}}</a></ion-label>
+      </ion-item>
+    </ion-list>
+    </h3>
+</ion-content>
